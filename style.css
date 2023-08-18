@@ -24,6 +24,7 @@ width: auto;
 height: fit-content;
 }
 .image:nth-child(even) {
+
     background-color: red;
     text-align: center;
     width: 300px;
@@ -31,6 +32,7 @@ height: fit-content;
 }
 
 .image:nth-child(odd) {
+
     background-color: blue;
     text-align: center;
     width: 300px;
@@ -38,12 +40,12 @@ height: fit-content;
 }
 
 #image1:checked~div div {
-    transform: translateX(0px);
+    transform: translateX(0);
     transition: 1s;
 }
 #image2:checked~div div {
-    transform: translateX(-150px);
-    transition: 1s;
+    transform:translateX(-150px);
+    transition:1s;
 }
 #image3:checked~div div {
     transform: translateX(-300px);
