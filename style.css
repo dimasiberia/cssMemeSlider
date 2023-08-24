@@ -1,6 +1,6 @@
 * {
-    margin: 0px auto;
     box-sizing: border-box;
+    width: 1440px;
 }
 
 main {
@@ -9,15 +9,15 @@ main {
 }
 
 .view-div {
-    width: 300px;
-    height: 200px;
+    width: 900px;
+    height: 600px;
     overflow-x: hidden;
     position: relative;
 }
 
 .container {
-    width: 1500px;
-    height: 200px;
+    width: 4500px;
+    height: 600px;
     display: flex;
     position: relative;
 }
@@ -39,44 +39,44 @@ background-image: url(./images/033930637e36443df437eab433206f77.jpg);
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
-    width: 300px;
-    height: 200px;
+    width: 900px;
+    height: 600px;
 }
 .image:nth-child(2) {
 
-background-image: url(./images/033930637e36443df437eab433206f77.jpg);
+background-image: url(./images/hqdefault.jpg);
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
-    width: 300px;
-    height: 200px;
+    width: 900px;
+    height: 600px;
 }
 .image:nth-child(3) {
 
-background-image: url(./images/033930637e36443df437eab433206f77.jpg);
+background-image: url(./images/images-2.jpeg);
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
-    width: 300px;
-    height: 200px;
+    width: 900px;
+    height: 600px;
 }
 .image:nth-child(4) {
 
-background-image: url(./images/033930637e36443df437eab433206f77.jpg);
+background-image: url(./images/images-3.jpeg);
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
-    width: 300px;
-    height: 200px;
+    width: 900px;
+    height: 600px;
 }
 .image:nth-child(5) {
 
-background-image: url(./images/033930637e36443df437eab433206f77.jpg);
+background-image: url(./images/images.jpeg);
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
-    width: 300px;
-    height: 200px;
+    width: 900px;
+    height: 600px;
 }
 
 
@@ -87,22 +87,22 @@ background-position: center;
 }
 
 #image2:checked~div div {
-    transform: translateX(-150px);
-    transition: 1s;
-}
-
-#image3:checked~div div {
-    transform: translateX(-300px);
-    transition: 1s;
-}
-
-#image4:checked~div div {
     transform: translateX(-450px);
     transition: 1s;
 }
 
+#image3:checked~div div {
+    transform: translateX(-900px);
+    transition: 1s;
+}
+
+#image4:checked~div div {
+    transform: translateX(-1350px);
+    transition: 1s;
+}
+
 #image5:checked~div div {
-    transform: translateX(-600px);
+    transform: translateX(-1800px);
     transition: 1s;
 }
 
