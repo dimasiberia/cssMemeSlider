@@ -41,6 +41,8 @@ background-repeat: no-repeat;
 background-position: center;
     width: 900px;
     height: 600px;
+    border-radius: 30px;
+    background-color: black;
 }
 .image:nth-child(2) {
 
@@ -50,6 +52,8 @@ background-repeat: no-repeat;
 background-position: center;
     width: 900px;
     height: 600px;
+    border-radius: 30px;
+    background-color: black;
 }
 .image:nth-child(3) {
 
@@ -59,6 +63,8 @@ background-repeat: no-repeat;
 background-position: center;
     width: 900px;
     height: 600px;
+    border-radius: 30px;
+    background-color: black;
 }
 .image:nth-child(4) {
 
@@ -68,6 +74,8 @@ background-repeat: no-repeat;
 background-position: center;
     width: 900px;
     height: 600px;
+    border-radius: 30px;
+    background-color: black;
 }
 .image:nth-child(5) {
 
@@ -77,6 +85,8 @@ background-repeat: no-repeat;
 background-position: center;
     width: 900px;
     height: 600px;
+    border-radius: 30px;
+    background-color: black;
 }
 
 
