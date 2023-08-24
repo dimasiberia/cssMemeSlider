@@ -1,16 +1,18 @@
 * {
-    margin: 0px;
+    margin: 0px auto;
     box-sizing: border-box;
 }
 
 main {
     width: 100%;
+    margin: 0 auto;
 }
 
 .view-div {
     width: 300px;
     height: 200px;
-    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .container {
@@ -19,10 +21,18 @@ main {
     display: flex;
     position: relative;
 }
-img{
-width: auto;
-height: fit-content;
+.btn-container{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
 }
+
+.image {
+    width: auto;
+    height: fit-content;
+    position: relative;
+}
+
 .image:nth-child(even) {
 
     background-color: red;
@@ -43,37 +53,76 @@ height: fit-content;
     transform: translateX(0);
     transition: 1s;
 }
+
 #image2:checked~div div {
-    transform:translateX(-150px);
-    transition:1s;
+    transform: translateX(-150px);
+    transition: 1s;
 }
+
 #image3:checked~div div {
     transform: translateX(-300px);
     transition: 1s;
 }
+
 #image4:checked~div div {
     transform: translateX(-450px);
     transition: 1s;
 }
+
 #image5:checked~div div {
     transform: translateX(-600px);
     transition: 1s;
 }
-label{
+
+label {
+    margin: 20px 0px;
     height: 40px;
     width: 40px;
     background-color: black;
     border-radius: 50%;
     display: inline-block;
 }
-#image1:checked~label:nth-of-type(1),
-#image2:checked~label:nth-of-type(2),
-#image3:checked~label:nth-of-type(3),
-#image4:checked~label:nth-of-type(4),
-#image5:checked~label:nth-of-type(5){
-background-color:blueviolet;
+label:hover{
+    background-color:blueviolet
 }
+
+#image1:checked~div+div label:nth-of-type(1),
+#image2:checked~div+div label:nth-of-type(2),
+#image3:checked~div+div label:nth-of-type(3),
+#image4:checked~div+div label:nth-of-type(4),
+#image5:checked~div+div label:nth-of-type(5){
+    background-color: blueviolet;
+}
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     display: none;
+}
+
+p {
+    display: none;
+    opacity: 0;
+    font-size: 20px;
+}
+
+@keyframes smooth {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#image1:checked~p:nth-of-type(1),
+#image2:checked~p:nth-of-type(2),
+#image3:checked~p:nth-of-type(3),
+#image4:checked~p:nth-of-type(4),
+#image5:checked~p:nth-of-type(5) {
+    display: block;
+    opacity: 1;
+    animation: smooth 3s ease-in;
+
+
 }
