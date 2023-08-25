@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    margin: auto;
 
 }
 
@@ -16,15 +15,13 @@ body {
 }
 
 .view-div {
-    width: 100%;
-    height: calc(width/3);
+    width: 90%;
+    margin: 0 auto;
     overflow-x: hidden;
-    position: relative;
 }
 
 .container {
     width: 500%;
-    
     display: flex;
     position: relative;
 }
@@ -32,7 +29,7 @@ body {
 .btn-container {
     justify-content: center;
     flex-direction: column;
-    display: flex;
+    display: block;
 }
 
 .image {
@@ -48,8 +45,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 500px;
- 
+    padding-top: 15%;
     border-radius: 30px;
     background-color: black;
 }
@@ -61,7 +57,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-
+    padding-top: 15%;
     border-radius: 30px;
     background-color: black;
 }
@@ -73,6 +69,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    padding-top: 15%;
     height: calc(width/3)px;
 
     border-radius: 30px;
@@ -86,7 +83,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-
+    padding-top: 15%;
     border-radius: 30px;
     background-color: black;
 }
@@ -98,7 +95,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-
+    padding-top: 15%;
     border-radius: 30px;
     background-color: black;
 }
@@ -111,29 +108,30 @@ body {
 }
 
 #image2:checked~div.view-div div {
-    transform: translateX(-450px);
+    transform: translateX(-16.66666%);
     transition: 1s;
 }
 
 #image3:checked~div.view-div div {
-    transform: translateX(-900px);
+    transform: translateX(-33.3333333334%);
     transition: 1s;
 }
 
 #image4:checked~div.view-div div {
-    transform: translateX(-1350px);
+    transform: translateX(-50%);
     transition: 1s;
 }
 
 #image5:checked~div.view-div div {
-    transform: translateX(-1800px);
+    transform: translateX(-66.6666666668%);
     transition: 1s;
 }
 
 .labels {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
+    margin-right: 4vw;
 }
 
 
@@ -179,13 +177,16 @@ p {
     opacity: 0;
     font-size: 20px;
     text-align: left;
-    margin: 0px auto;
-    width: 700px;
+    margin-left: 5vw;
+
 }
 
 .desktop {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 @keyframes smooth {
@@ -206,4 +207,24 @@ p {
     display: flex;
     opacity: 1;
     animation: smooth 3s ease-in;
+}
+@media (max-width:500px){
+.desktop{
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+.text{
+    align-self: start;
+
+}
+.labels{
+    margin: 10px;
+}
+p{
+    text-align: left;
+    margin: 0;
+    margin-left: 5vw;
+  
+}
 }
