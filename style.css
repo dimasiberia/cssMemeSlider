@@ -23,7 +23,7 @@ body {
 .container {
     width: 500%;
     display: flex;
-    position: relative;
+
 }
 
 .btn-container {
@@ -35,7 +35,7 @@ body {
 .image {
     width: auto;
     height: fit-content;
-    position: relative;
+
 }
 
 .image:nth-child(3) {
@@ -70,7 +70,7 @@ body {
     background-position: center;
     width: 100%;
     padding-top: 15%;
-    height: calc(width/3)px;
+
 
     border-radius: 30px;
     background-color: black;
