@@ -1,74 +1,234 @@
 * {
-    margin: 0px;
     box-sizing: border-box;
+
 }
 
 main {
-    width: 100%;
+
+    margin: 0 auto;
+
+
+}
+
+body {
+    max-width: 1920px;
 }
 
 .view-div {
-    width: 600px;
-    height: 400px;
-    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 3000px;
-    height: 400px;
+    width: 500%;
     display: flex;
-    position: relative;
+
 }
 
-.image:nth-child(even) {
-    background-color: red;
-    text-align: center;
-    width: 600px;
-    height: 400px;
+.btn-container {
+    justify-content: center;
+    flex-direction: column;
+    display: block;
 }
 
-.image:nth-child(odd) {
-    background-color: blue;
-    text-align: center;
-    width: 600px;
-    height: 400px;
+.image {
+    width: auto;
+    height: fit-content;
+
 }
 
-#image1:checked~div div {
-    transform: translateX(0px);
+.image:nth-child(3) {
+
+    background-image: url(./images/033930637e36443df437eab433206f77.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-top: 15%;
+    border-radius: 30px;
+    background-color: black;
+}
+
+.image:nth-child(2) {
+
+    background-image: url(./images/hqdefault.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-top: 15%;
+    border-radius: 30px;
+    background-color: black;
+}
+
+.image:nth-child(1) {
+
+    background-image: url(./images/images-2.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-top: 15%;
+
+
+    border-radius: 30px;
+    background-color: black;
+}
+
+.image:nth-child(4) {
+
+    background-image: url(./images/images-3.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-top: 15%;
+    border-radius: 30px;
+    background-color: black;
+}
+
+.image:nth-child(5) {
+
+    background-image: url(./images/images.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-top: 15%;
+    border-radius: 30px;
+    background-color: black;
+}
+
+
+
+#image1:checked~div.view-div div {
+    transform: translateX(0);
     transition: 1s;
 }
-#image2:checked~div div {
-    transform: translateX(-300px);
+
+#image2:checked~div.view-div div {
+    transform: translateX(-16.66666%);
     transition: 1s;
 }
-#image3:checked~div div {
-    transform: translateX(-600px);
+
+#image3:checked~div.view-div div {
+    transform: translateX(-33.3333333334%);
     transition: 1s;
 }
-#image4:checked~div div {
-    transform: translateX(-900px);
+
+#image4:checked~div.view-div div {
+    transform: translateX(-50%);
     transition: 1s;
 }
-#image5:checked~div div {
-    transform: translateX(-1200px);
+
+#image5:checked~div.view-div div {
+    transform: translateX(-66.6666666668%);
     transition: 1s;
 }
-label{
-    height: 40px;
-    width: 40px;
+
+.labels {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4vw;
+}
+
+
+label div {
+
+    height: 20px;
+    width: 20px;
+    margin: 10px 10px;
     background-color: black;
     border-radius: 50%;
     display: inline-block;
 }
-#image1:checked~label:nth-of-type(1),
-#image2:checked~label:nth-of-type(2),
-#image3:checked~label:nth-of-type(3),
-#image4:checked~label:nth-of-type(4),
-#image5:checked~label:nth-of-type(5){
-background-color:blueviolet;
+
+label:hover div {
+    background-color: gold;
+    cursor: pointer;
+
+
 }
+
+label {
+    cursor: pointer;
+
+}
+
+#image1:checked~div+div label:nth-of-type(1) div,
+#image2:checked~div+div label:nth-of-type(2) div,
+#image3:checked~div+div label:nth-of-type(3) div,
+#image4:checked~div+div label:nth-of-type(4) div,
+#image5:checked~div+div label:nth-of-type(5) div {
+    background-color: gold;
+    border: 5px solid black;
+}
+
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     display: none;
 }
+
+p {
+    display: none;
+    opacity: 0;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 5vw;
+
+}
+
+.desktop {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+@keyframes smooth {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#image1:checked~div p:nth-of-type(1),
+#image2:checked~div p:nth-of-type(2),
+#image3:checked~div p:nth-of-type(3),
+#image4:checked~div p:nth-of-type(4),
+#image5:checked~div p:nth-of-type(5) {
+    display: flex;
+    opacity: 1;
+    animation: smooth 3s ease-in;
+}
+@media (max-width:500px){
+.desktop{
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+.text{
+    align-self: start;
+
+}
+.labels{
+    margin: 10px;
+}
+p{
+    text-align: left;
+    margin: 0;
+    margin-left: 5vw;
+  
+}
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> d1681cd (feat: make responsive slider and margins)
